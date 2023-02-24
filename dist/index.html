@@ -6,14 +6,14 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230224193433">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230224194217">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap&_v=20230224193433" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css?_v=20230224193433" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap&_v=20230224194217" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css?_v=20230224194217" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -24,17 +24,8 @@
 					<picture><source srcset="img/header/header__logo.webp" type="image/webp"><img src="img/header/header__logo.png" alt="Main logo Nft" class="header__logo"></picture>
 				</a>
 				<ul class="header__menu">
-					<li class="menu__item">
-						<a href="#" class="item__link">Explore</a>
-					</li>
-					<li class="menu__item">
-						<a href="#" class="item__link">Stats</a>
-					</li>
-					<li class="menu__item">
-						<a href="#" class="item__link">Drops</a>
-					</li>
-					<li class="menu__item">
-						<a href="#" class="item__link">Activity</a>
+					<li v-for="item in menuItems" @click="closeBurgerMenu()" class="menu__item">
+						<a href="#" class="item__link"> {{item.itemLink}} </a>
 					</li>
 				</ul>
 				<div class="header__buttons">
@@ -60,18 +51,32 @@
 			</div>
 		</footer>
 	</div>
-	<script src="https://unpkg.com/vue@3/dist/vue.global.js?_v=20230224193433"></script>
-	<script src="js/app.min.js?_v=20230224193433"></script>
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js?_v=20230224194217"></script>
+	<script src="js/app.min.js?_v=20230224194217"></script>
 
 	<script>
 		const {
 			createApp
 		} = Vue
 
+		const menuItems = [{
+				itemLink: "Explore"
+			},
+			{
+				itemLink: "Stats"
+			},
+			{
+				itemLink: "Drops"
+			},
+			{
+				itemLink: "Activity"
+			}
+		]
+
 		createApp({
 			data() {
 				return {
-					message: 'Hello Vue!'
+					menuItems: menuItems
 				}
 			},
 
@@ -79,6 +84,10 @@
 
 				openBurgerMenu() {
 					document.documentElement.classList.toggle('menu-open');
+				},
+
+				closeBurgerMenu() {
+					document.documentElement.classList.remove('menu-open');
 				}
 			}
 

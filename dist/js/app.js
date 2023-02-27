@@ -28,34 +28,52 @@
         NEXTBTN.addEventListener("click", plusSlides);
         const FIRSTSLIDE = document.querySelector(".swiper-slide__img--first");
         const SECONSLIDE = document.querySelector(".swiper-slide__img--second");
+        const DOTS = document.querySelectorAll(".dot");
+        const SECONDCIRCLE = document.querySelector(".swiper-slide--second");
+        const FIRSTCIRCLE = document.querySelector(".swiper-slide--first");
+        function circleAnimations() {
+            FIRSTCIRCLE.classList.add("active");
+            setTimeout(secondCircle, 100);
+            function secondCircle() {
+                SECONDCIRCLE.classList.add("active");
+            }
+        }
         let slideIndex = 1;
         function plusSlides() {
-            showSlides(slideIndex += 1);
+            circleAnimations();
+            setTimeout((function() {
+                showSlides(slideIndex += 1);
+            }), 400);
         }
         function showSlides() {
             let i;
             if (slideIndex > SLIDEITEMS.length) slideIndex = 1;
             if (slideIndex < 1) slideIndex = SLIDEITEMS.length;
             for (i = 0; i < SLIDEITEMS.length; i++) SLIDEITEMS[i].style.display = "none";
+            for (i = 0; i < DOTS.length; i++) DOTS[i].className = DOTS[i].className.replace(" active", "");
             SLIDEITEMS[slideIndex - 1].style.display = "block";
-            let imgSrc;
-            function getSrcForFirstSlider() {
-                let firstCounter;
-                firstCounter = slideIndex + 1;
-                imgSrc = SLIDEITEMS[firstCounter].querySelector(".swiper-slide__img").src;
-                FIRSTSLIDE.src = imgSrc;
-                console.log(`firstCounter = ${firstCounter}`);
+            DOTS[slideIndex - 1].className += " active";
+            function getSrcForSlider() {
+                let counterFirst;
+                let counterPrev;
+                if (slideIndex >= 1 && slideIndex < SLIDEITEMS.length) {
+                    counterFirst = slideIndex + 1;
+                    counterPrev = slideIndex;
+                    if (counterFirst > SLIDEITEMS.length - 1) counterFirst = 0;
+                    if (counterPrev > SLIDEITEMS.length - 1) counterPrev = 1;
+                } else {
+                    counterFirst = 0;
+                    counterPrev = 1;
+                }
+                FIRSTSLIDE.src = SLIDEITEMS[counterFirst].querySelector(".swiper-slide__img").src;
+                SECONSLIDE.src = SLIDEITEMS[counterPrev].querySelector(".swiper-slide__img").src;
             }
-            function getSrcForSecondSlider() {
-                let secondCounter;
-                secondCounter = slideIndex + 2;
-                imgSrc = SLIDEITEMS[secondCounter].querySelector(".swiper-slide__img").src;
-                SECONSLIDE.src = imgSrc;
-                console.log(`secondCounter = ${secondCounter}`);
+            getSrcForSlider();
+            setTimeout(removeActive, 1e3);
+            function removeActive() {
+                FIRSTCIRCLE.classList.remove("active");
+                SECONDCIRCLE.classList.remove("active");
             }
-            getSrcForFirstSlider();
-            getSrcForSecondSlider();
-            console.log(`slideIndex = ${slideIndex}`);
         }
         showSlides(slideIndex);
     }));

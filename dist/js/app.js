@@ -2777,6 +2777,17 @@
             },
             on: {}
         });
+        if (document.querySelector(".collections-swiper")) new core(".collections-swiper", {
+            modules: [ Navigation ],
+            slidesPerView: 3,
+            spaceBetween: 24,
+            speed: 800,
+            grid: {
+                rows: 3
+            },
+            loop: false,
+            on: {}
+        });
     }
     window.addEventListener("load", (function(e) {
         initSliders();

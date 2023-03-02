@@ -6,14 +6,14 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230301153419">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230302203528">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap&_v=20230301153419" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css?_v=20230301153419" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap&_v=20230302203528" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css?_v=20230302203528" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -75,27 +75,25 @@
 							<span class="dot"></span>
 							<span class="dot"></span>
 						</div>
-						<div class="swiper">
-							<div class="swiper-wrapper">
-								<div class="slide fade">
-									<picture><source srcset="img/hero/hero-slider-img-1.webp" type="image/webp"><img class="swiper-slide__img" src="img/hero/hero-slider-img-1.png" alt="A man near a big pink planet" width="466" height="618"></picture>
-								</div>
-								<div class="slide fade">
-									<picture><source srcset="img/hero/hero-slider-img-2.webp" type="image/webp"><img class="swiper-slide__img" src="img/hero/hero-slider-img-2.jpeg" alt="A man near a big pink planet" width="466" height="618"></picture>
-								</div>
-								<div class="slide fade">
-									<picture><source srcset="img/hero/hero-slider-img-3.webp" type="image/webp"><img class="swiper-slide__img" src="img/hero/hero-slider-img-3.jpg" alt="A man near a big pink planet" width="466" height="618"></picture>
-								</div>
+						<div class="hero__slider--list">
+							<div class="slide fade">
+								<picture><source srcset="img/hero/hero-slider-img-1.webp" type="image/webp"><img class="swiper-slide__img" src="img/hero/hero-slider-img-1.png" alt="A man near a big pink planet" width="466" height="618"></picture>
 							</div>
-							<div class="swiper-slide--first">
-								<div class="swiper-slide__border">
-									<img class="swiper-slide__img--first" src="" alt="" width="466" height="618">
-								</div>
+							<div class="slide fade">
+								<picture><source srcset="img/hero/hero-slider-img-2.webp" type="image/webp"><img class="swiper-slide__img" src="img/hero/hero-slider-img-2.jpeg" alt="A man near a big pink planet" width="466" height="618"></picture>
 							</div>
-							<div class="swiper-slide--second">
-								<div class="swiper-slide__border">
-									<img class="swiper-slide__img--second" src="" alt="" width="466" height="618">
-								</div>
+							<div class="slide fade">
+								<picture><source srcset="img/hero/hero-slider-img-3.webp" type="image/webp"><img class="swiper-slide__img" src="img/hero/hero-slider-img-3.jpg" alt="A man near a big pink planet" width="466" height="618"></picture>
+							</div>
+						</div>
+						<div class="swiper-slide--first">
+							<div class="swiper-slide__border">
+								<img class="swiper-slide__img--first" src="" alt="" width="466" height="618">
+							</div>
+						</div>
+						<div class="swiper-slide--second">
+							<div class="swiper-slide__border">
+								<img class="swiper-slide__img--second" src="" alt="" width="466" height="618">
 							</div>
 						</div>
 					</div>
@@ -421,14 +419,190 @@
 					<button class="collections__button">See All Collections </button>
 				</div>
 			</section>
+			<section class="trending">
+				<div class="trending__container">
+					<h2 class="trending__title">NFTs</h2>
+					<h3 class="trending__subtitle">Trending NFTs</h3>
+					<div class="trending__swiper">
+						<ul class="trending__list swiper-wrapper">
+							<li class="trending__list--item swiper-slide">
+								<picture><source srcset="img/trending/trending-image-1.webp" type="image/webp"><img class="trending__list--image" src="img/trending/trending-image-1.png" alt="A men near purple planets"></picture>
+								<h4 class="trending__list--author">
+									By Ya Chin-Ho
+									<svg class="trending__list--checkicon">
+										<use xlink:href="img/icons/icons.svg#trending-icon-check"></use>
+									</svg>
+								</h4>
+								<h5 class="trending__list--title">Venture Capitalist</h5>
+								<div class="trending__list--block">
+									<span class="trending__list--block__from">From</span>
+									<span class="trending__list--block__bid">Highest bid</span>
+									<span class="trending__list--block__sale">Not for sale</span>
+									<span class="trending__list--block__price">2.835 ETH</span>
+								</div>
+							</li>
+							<li class="trending__list--item swiper-slide">
+								<picture><source srcset="img/trending/trending-image-2.webp" type="image/webp"><img class="trending__list--image" src="img/trending/trending-image-2.png" alt="A men near purple planets"></picture>
+								<h4 class="trending__list--author">
+									By Ya Chin-Ho
+									<svg class="trending__list--checkicon">
+										<use xlink:href="img/icons/icons.svg#trending-icon-check"></use>
+									</svg>
+								</h4>
+								<h5 class="trending__list--title">Venture Capitalist</h5>
+								<div class="trending__list--block">
+									<span class="trending__list--block__from">From</span>
+									<span class="trending__list--block__bid">Highest bid</span>
+									<span class="trending__list--block__sale">Not for sale</span>
+									<span class="trending__list--block__price">2.835 ETH</span>
+								</div>
+							</li>
+							<li class="trending__list--item swiper-slide">
+								<picture><source srcset="img/trending/trending-image-3.webp" type="image/webp"><img class="trending__list--image" src="img/trending/trending-image-3.png" alt="A men near purple planets"></picture>
+								<h4 class="trending__list--author">
+									By Ya Chin-Ho
+									<svg class="trending__list--checkicon">
+										<use xlink:href="img/icons/icons.svg#trending-icon-check"></use>
+									</svg>
+								</h4>
+								<h5 class="trending__list--title">Venture Capitalist</h5>
+								<div class="trending__list--block">
+									<span class="trending__list--block__from">From</span>
+									<span class="trending__list--block__bid">Highest bid</span>
+									<span class="trending__list--block__sale">Not for sale</span>
+									<span class="trending__list--block__price">2.835 ETH</span>
+								</div>
+							</li>
+							<li class="trending__list--item swiper-slide">
+								<picture><source srcset="img/trending/trending-image-4.webp" type="image/webp"><img class="trending__list--image" src="img/trending/trending-image-4.png" alt="A men near purple planets"></picture>
+								<h4 class="trending__list--author">
+									By Ya Chin-Ho
+									<svg class="trending__list--checkicon">
+										<use xlink:href="img/icons/icons.svg#trending-icon-check"></use>
+									</svg>
+								</h4>
+								<h5 class="trending__list--title">Venture Capitalist</h5>
+								<div class="trending__list--block">
+									<span class="trending__list--block__from">From</span>
+									<span class="trending__list--block__bid">Highest bid</span>
+									<span class="trending__list--block__sale">Not for sale</span>
+									<span class="trending__list--block__price">2.835 ETH</span>
+								</div>
+							</li>
+						</ul>
+						<div class="swiper-scrollbar"></div>
+					</div>
+				</div>
+			</section>
+			<section class="resources">
+				<div class="resources__container">
+					<h2 class="resources__title">NFTs</h2>
+					<h3 class="resources__subtitle">Resouces for getting started</h3>
+					<div class="resources__block">
+						<div class="resources__main">
+							<picture><source srcset="img/resources/resources-image-1.webp" type="image/webp"><img class="resources__main__picture" src="img/resources/resources-image-1.png" alt="There are a lot of super hero"></picture>
+							<div class="resources__main__item">
+								<div class="resources__main__item__buttons">
+									<button class="item__buttons__token">NFT Token</button>
+									<div class="item__buttons__comments">
+										<svg class="buttons__comments__icon">
+											<use xlink:href="img/icons/icons.svg#resources-icon-comment"></use>
+										</svg>
+										No Comment
+									</div>
+								</div>
+								<h4 class="resources__main__item__title">The Seven Secrets I should have received NFTs.</h4>
+								<div class="resources__main__item__author">
+									<picture><source srcset="img/resources/resource-ava-1.webp" type="image/webp"><img class="item__author__picture" src="img/resources/resource-ava-1.png" alt="Election Season"></picture>
+									<div class="item__author__block">
+										<span class="item__author__name">Election Season</span>
+										<span class="item__author__date">June 2, 2022</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<ul class="resources__list">
+							<li class="resources__list__item">
+								<picture><source srcset="img/resources/resources-image-2.webp" type="image/webp"><img class="resources__list__item__picture" src="img/resources/resources-image-2.png" alt="A cat maybe"></picture>
+								<div class="resources__list__item__block">
+									<div class="resources__main__item__buttons">
+										<button class="item__buttons__token">Game</button>
+										<button class="item__buttons__token">NFT</button>
+										<div class="item__buttons__comments">
+											<svg class="buttons__comments__icon">
+												<use xlink:href="img/icons/icons.svg#resources-icon-comment"></use>
+											</svg>
+											No Comment
+										</div>
+									</div>
+									<h4 class="resources__main__item__title">I think I minted duplicate NFTs</h4>
+									<div class="resources__main__item__author">
+										<picture><source srcset="img/resources/resource-ava-2.webp" type="image/webp"><img class="item__author__picture" src="img/resources/resource-ava-2.png" alt="Courtney Henry"></picture>
+										<div class="item__author__block">
+											<span class="item__author__name">Courtney Henry</span>
+											<span class="item__author__date">May 27, 2022</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="resources__list__item">
+								<picture><source srcset="img/resources/resources-image-3.webp" type="image/webp"><img class="resources__list__item__picture" src="img/resources/resources-image-3.png" alt="A samourai with green swords"></picture>
+								<div class="resources__list__item__block">
+									<div class="resources__main__item__buttons">
+										<button class="item__buttons__token">NFT Token</button>
+										<button class="item__buttons__token">NFT</button>
+										<div class="item__buttons__comments">
+											<svg class="buttons__comments__icon">
+												<use xlink:href="img/icons/icons.svg#resources-icon-comment"></use>
+											</svg>
+											No Comment
+										</div>
+									</div>
+									<h4 class="resources__main__item__title">The Seven Secrets I should have received NFTs.</h4>
+									<div class="resources__main__item__author">
+										<picture><source srcset="img/resources/resource-ava-3.webp" type="image/webp"><img class="item__author__picture" src="img/resources/resource-ava-3.png" alt="Courtney Henry"></picture>
+										<div class="item__author__block">
+											<span class="item__author__name">Courtney Henry</span>
+											<span class="item__author__date">May 27, 2022</span>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+			</section>
+			<section class="popular">
+				<div class="popular__container">
+					<div class="popular__top">
+						<div class="popular__titles">
+							<h2 class="popular__title">NFTs</h2>
+							<h3 class="popular__subtitle">Browse popular NFTs</h3>
+						</div>
+						<div class="popular__buttons">
+							<button class="popular__buttons--btn">All NFT,s</button>
+							<button class="popular__buttons--btn">Art</button>
+							<button class="popular__buttons--btn">Games</button>
+							<button class="popular__buttons--btn">Sports</button>
+							<button class="popular__buttons--btn">Tranding Cards</button>
+						</div>
+					</div>
+					<ul class="popular__list">
+						<li class="popular__item">
+
+						</li>
+					</ul>
+				</div>
+			</section>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
 			</div>
 		</footer>
 	</div>
-	<script src="https://unpkg.com/vue@3/dist/vue.global.js?_v=20230301153419"></script>
-	<script src="js/app.min.js?_v=20230301153419"></script>
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js?_v=20230302203528"></script>
+	<script src="js/app.min.js?_v=20230302203528"></script>
 
 	<script>
 		const {

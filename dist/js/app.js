@@ -3375,6 +3375,60 @@
             },
             on: {}
         });
+        if (document.querySelector(".popular__slider")) new core(".popular__slider", {
+            modules: [ Navigation, Pagination, Scrollbar ],
+            slidesPerView: 1.2,
+            spaceBetween: 24,
+            speed: 800,
+            loop: false,
+            breakpoints: {
+                640: {
+                    slidesPerView: 2.2,
+                    spaceBetween: 10,
+                    autoHeight: true
+                },
+                768: {
+                    slidesPerView: 2.2,
+                    spaceBetween: 20
+                },
+                992: {
+                    slidesPerView: 3.2,
+                    spaceBetween: 24
+                },
+                1268: {
+                    slidesPerView: 4,
+                    spaceBetween: 24
+                }
+            },
+            on: {}
+        });
+        if (document.querySelector(".clients__swiper")) new core(".clients__swiper", {
+            modules: [ Navigation, Pagination, Scrollbar ],
+            slidesPerView: 1.5,
+            spaceBetween: 30,
+            speed: 800,
+            loop: false,
+            breakpoints: {
+                640: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 50,
+                    autoHeight: true
+                },
+                768: {
+                    slidesPerView: 3.5,
+                    spaceBetween: 50
+                },
+                992: {
+                    slidesPerView: 4.5,
+                    spaceBetween: 50
+                },
+                1268: {
+                    slidesPerView: 5,
+                    spaceBetween: 50
+                }
+            },
+            on: {}
+        });
     }
     window.addEventListener("load", (function(e) {
         initSliders();
@@ -3399,7 +3453,7 @@
         const FIRSTCIRCLE = document.querySelector(".swiper-slide--first");
         function circleAnimations() {
             FIRSTCIRCLE.classList.add("active");
-            setTimeout(secondCircle, 100);
+            secondCircle();
             function secondCircle() {
                 SECONDCIRCLE.classList.add("active");
             }
@@ -3409,7 +3463,7 @@
             circleAnimations();
             setTimeout((function() {
                 showSlides(slideIndex += 1);
-            }), 400);
+            }), 100);
         }
         function showSlides() {
             let i;

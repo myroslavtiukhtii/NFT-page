@@ -3451,19 +3451,22 @@
         const DOTS = document.querySelectorAll(".dot");
         const SECONDCIRCLE = document.querySelector(".swiper-slide--second");
         const FIRSTCIRCLE = document.querySelector(".swiper-slide--first");
-        function circleAnimations() {
+        function addCircleAnimations() {
+            SECONDCIRCLE.classList.add("active");
             FIRSTCIRCLE.classList.add("active");
-            secondCircle();
-            function secondCircle() {
-                SECONDCIRCLE.classList.add("active");
-            }
         }
+        SECONDCIRCLE.addEventListener("animationend", (() => {
+            SECONDCIRCLE.classList.remove("active");
+        }));
+        FIRSTCIRCLE.addEventListener("animationend", (() => {
+            FIRSTCIRCLE.classList.remove("active");
+        }));
         let slideIndex = 1;
         function plusSlides() {
-            circleAnimations();
-            setTimeout((function() {
+            if (SECONDCIRCLE.classList.contains("active") || FIRSTCIRCLE.classList.contains("active")) return; else {
+                addCircleAnimations();
                 showSlides(slideIndex += 1);
-            }), 100);
+            }
         }
         function showSlides() {
             let i;
@@ -3489,11 +3492,6 @@
                 SECONSLIDE.src = SLIDEITEMS[counterPrev].querySelector(".swiper-slide__img").src;
             }
             getSrcForSlider();
-            setTimeout(removeActive, 1e3);
-            function removeActive() {
-                FIRSTCIRCLE.classList.remove("active");
-                SECONDCIRCLE.classList.remove("active");
-            }
         }
         showSlides(slideIndex);
         const counters = document.querySelectorAll(".item__number");
@@ -3519,6 +3517,25 @@
             }
             window.addEventListener("scroll", revealCounters);
         }));
+        document.addEventListener("mousemove", parallax);
+        function parallax(event) {
+            this.querySelectorAll(".mouse").forEach((shift => {
+                const position = shift.getAttribute("value");
+                const x = (window.innerWidth - event.pageX * position) / 90;
+                const y = (window.innerHeight - event.pageY * position) / 90;
+                shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+            }));
+        }
+        const FADEITEMS = document.querySelectorAll(".reveal-fade");
+        function fadeItems() {
+            for (let i = 0; i < FADEITEMS.length; i++) {
+                let windowHeight = window.innerHeight;
+                let itemTop = FADEITEMS[i].getBoundingClientRect().top;
+                let itemVisibile = 150;
+                if (itemTop < windowHeight - itemVisibile) FADEITEMS[i].classList.add("active"); else FADEITEMS[i].classList.remove("active");
+            }
+        }
+        window.addEventListener("scroll", fadeItems);
     }));
     window["FLS"] = true;
     isWebp();

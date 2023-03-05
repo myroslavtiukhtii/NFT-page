@@ -6,14 +6,14 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230304210031">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230305192804">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap&_v=20230304210031" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css?_v=20230304210031" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap&_v=20230305192804" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css?_v=20230305192804" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -62,13 +62,15 @@
 							<button class="buttons__create">Create</button>
 						</div>
 						<div class="hero__more">
-							<img src="img/hero/hero-play-icon.svg" alt="">
-							<span class="more__text">Learn more about Nftico</span>
+							<img class="hero__img" src="img/hero/hero-play-icon.svg" alt="Play icon">
+							<span class="more__text">
+								<a href="#">Learn more about Nftico</a>
+							</span>
 						</div>
 					</div>
 					<div class="hero__slider">
 						<button class="slider__button-next">
-							<img src="img/hero/hero-icon-arrow.svg" alt="Arrow next slide">
+							<img class="icon" src="img/hero/hero-icon-arrow.svg" alt="Arrow next slide">
 						</button>
 						<div class="slider__dots">
 							<span class="dot"></span>
@@ -98,14 +100,14 @@
 						</div>
 					</div>
 					<div class="hero__rectangles">
-						<picture><source srcset="img/hero/hero-rectangle-1.webp" type="image/webp"><img class="rectangles__purple" src="img/hero/hero-rectangle-1.png" alt="Purple rectangle"></picture>
-						<picture><source srcset="img/hero/hero-rectangle-2.webp" type="image/webp"><img class="rectangles__yellow" src="img/hero/hero-rectangle-2.png" alt="Yellow rectangle"></picture>
+						<picture><source srcset="img/hero/hero-rectangle-1.webp" type="image/webp"><img class="rectangles__purple mouse" value="2" src="img/hero/hero-rectangle-1.png" alt="Purple rectangle"></picture>
+						<picture><source srcset="img/hero/hero-rectangle-2.webp" type="image/webp"><img class="rectangles__yellow mouse" value="-2" src="img/hero/hero-rectangle-2.png" alt="Yellow rectangle"></picture>
 					</div>
 					<div class="hero__numbers">
 						<p class="numbers__text">
 							We will take all the worry and guesswork out of your blockchain and cryptocurrency concerns.
 						</p>
-						<ul class="numbers__list reveal">
+						<ul class="numbers__list reveal reveal-fade">
 							<li class="list__item">
 								<div class="item__number">
 									<span class="item__number" value="30000"></span>+
@@ -135,6 +137,7 @@
 				</div>
 			</section>
 			<section class="selected">
+				<div class="selected__gradient"></div>
 				<div class="selected__container">
 					<h2 class="selected__title">NFTs</h2>
 					<h3 class="selected__subtitle">Selected notable drops</h3>
@@ -836,8 +839,8 @@
 			</section>
 		</footer>
 	</div>
-	<script src="https://unpkg.com/vue@3/dist/vue.global.js?_v=20230304210031"></script>
-	<script src="js/app.min.js?_v=20230304210031"></script>
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js?_v=20230305192804"></script>
+	<script src="js/app.min.js?_v=20230305192804"></script>
 
 	<script>
 		const {

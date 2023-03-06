@@ -3337,15 +3337,34 @@
             },
             on: {}
         });
-        if (document.querySelector(".collections-swiper")) new core(".collections-swiper", {
-            modules: [ Navigation ],
-            slidesPerView: 3,
+        if (document.querySelector(".collections__swiper")) new core(".collections__swiper", {
+            modules: [ Navigation, Pagination ],
+            slidesPerView: 1,
             spaceBetween: 24,
             speed: 800,
-            grid: {
-                rows: 3
+            pagination: {
+                el: ".swiper__pagination"
             },
             loop: false,
+            breakpoints: {
+                640: {
+                    slidesPerView: 1.3,
+                    spaceBetween: 10,
+                    autoHeight: true
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                992: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 24
+                },
+                1268: {
+                    slidesPerView: 3,
+                    spaceBetween: 24
+                }
+            },
             on: {}
         });
         if (document.querySelector(".trending__swiper")) new core(".trending__swiper", {
@@ -3536,6 +3555,16 @@
             }
         }
         window.addEventListener("scroll", fadeItems);
+        const FADESUBTITLES = document.querySelectorAll(".reveal-subtitle");
+        function fadeSubtitle() {
+            for (let i = 0; i < FADESUBTITLES.length; i++) {
+                let windowHeight = window.innerHeight;
+                let itemTop = FADESUBTITLES[i].getBoundingClientRect().top;
+                let itemVisibile = 150;
+                if (itemTop < windowHeight - itemVisibile) FADESUBTITLES[i].classList.add("active"); else FADESUBTITLES[i].classList.remove("active");
+            }
+        }
+        window.addEventListener("scroll", fadeSubtitle);
     }));
     window["FLS"] = true;
     isWebp();

@@ -3306,8 +3306,8 @@
             observer: true,
             grabCursor: false,
             observeParents: true,
-            slidesPerView: 1.2,
-            spaceBetween: 24,
+            slidesPerView: 1.1,
+            spaceBetween: 10,
             autoHeight: true,
             centeredSlides: false,
             speed: 800,
@@ -3369,8 +3369,8 @@
         });
         if (document.querySelector(".trending__swiper")) new core(".trending__swiper", {
             modules: [ Navigation, Pagination, Scrollbar ],
-            slidesPerView: 1.2,
-            spaceBetween: 24,
+            slidesPerView: 1.1,
+            spaceBetween: 10,
             speed: 800,
             loop: false,
             breakpoints: {
@@ -3396,8 +3396,8 @@
         });
         if (document.querySelector(".popular__slider")) new core(".popular__slider", {
             modules: [ Navigation, Pagination, Scrollbar ],
-            slidesPerView: 1.2,
-            spaceBetween: 24,
+            slidesPerView: 1.1,
+            spaceBetween: 10,
             speed: 800,
             loop: false,
             breakpoints: {

@@ -349,6 +349,15 @@ html.menu-open .header__menu {
   left: 0;
 }
 
+html.menu-open .header__menu .menu__item {
+  -webkit-animation: item-slide 1.5s forwards;
+          animation: item-slide 1.5s forwards;
+  opacity: 0;
+  -webkit-transform: translate(-100%, 0px);
+      -ms-transform: translate(-100%, 0px);
+          transform: translate(-100%, 0px);
+}
+
 html.menu-open .header__menu .item__link {
   font-style: normal;
   font-weight: 500;
@@ -2306,6 +2315,42 @@ html.menu-open .header__buttons {
       -ms-transform: translateY(-85%);
           transform: translateY(-85%);
   opacity: 1;
+}
+
+@-webkit-keyframes item-slide {
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+}
+
+@keyframes item-slide {
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+}
+
+.header__item:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.header__item:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.header__item:nth-child(3) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.header__item:nth-child(4) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
 }
 
 /**
